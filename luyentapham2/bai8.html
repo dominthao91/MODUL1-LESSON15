@@ -6,6 +6,18 @@
 </head>
 <body>
 <script>
+    let a = +prompt("Nhấp số lượng phần tử mảng : ");
+    let arrayA = new Array(a);
+    for (let i = 0; i < arrayA.length; i++) {
+        arrayA[i] = Math.floor(Math.random() * 20);
+    }
+    function daoMang(arrayA) {
+        arrayA.reverse();
+    }
+    alert('mảng ban đầu ' + arrayA);
+    daoMang(arrayA);
+    alert("mảng sau khi reverse" + arrayA);
+
 
 </script>
 </body>
