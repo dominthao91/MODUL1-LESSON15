@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nhập vào có phải số dương ko</title>
+</head>
+<body>
+<script>
+    let input = prompt('nhập vào số bất kì');
+
+    function checkInteger() {
+        if (input < 0) {
+            return false;
+        }
+        return true;
+    }
+
+    alert(checkInteger(input));
+</script>
+</body>
+</html>

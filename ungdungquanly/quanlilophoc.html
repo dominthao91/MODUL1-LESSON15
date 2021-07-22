@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>quản lí thành vien lớp học</title>
+</head>
+<body>
+<h2>Add New Members</h2>
+<input type="text" id="input">
+<button onclick="addNew()">Add</button>
+<p id="check" style="color: red"></p>
+<h3>Display Member C0621H1</h3>
+<table border="1">
+    <tr bgcolor="aqua">
+        <td>STT</td>
+        <td>List Member</td>
+        <td colspan="2" style="text-align: center">Action</td>
+    </tr>
+    <tbody id="myBody" style="background-color: mintcream">
+    </tbody>
+</table>
+<script>
+    let members = ['Đăng', 'Ý', 'Đức', 'Toàn'];
+
+    function listMembers() {
+        let newMember = '';
+        for (let i = 0; i < members.length; i++) {
+            newMember += '<tr>' + '<td>' + i + '</td>' + '<td>' + members[i] + '<td><button style="background-color:chartreuse" onclick="edit(' + i + ')">Edit'
+                + '<td><button id="aa" onclick="del(' + i + ')" style="background-color: red" >Delete' + '</td>' + '</tr>';
+        }
+        document.getElementById('myBody').innerHTML = newMember;
+    }
+
+    listMembers();
+
+    function addNew() {
+        let add = document.getElementById('input').value;
+        let text;
+        if (add == "") {
+            text = 'The name is required! Please try again!';
+            document.getElementById('check').innerHTML = text;
+        } else {
+            members.push(add);
+            document.getElementById('input').value;
+            document.getElementById('check').innerHTML = '';
+            listMembers();
+        }
+
+        document.getElementById('input').value = '';
+    }
+
+    function del(xoa) {
+        members.splice(xoa, 1);
+        listMembers();
+    }
+
+    function edit(sua) {
+        let newadd = prompt('mời bạn nhập vào tên thành viên mới :', members[sua]);
+        members[sua] = newadd;
+        listMembers();
+    }
+</script>
+</body>
+</html>

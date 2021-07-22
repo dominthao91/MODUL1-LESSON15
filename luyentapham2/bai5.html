@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên nhỏ nhất trong chuỗi</title>
+</head>
+<body>
+<script>
+    let a = +prompt('nhập vào số nguyên a');
+    let b = +prompt('nhập vào số nguyên b');
+    let c = +prompt('nhập vào số nguyên c');
+
+    function searchMin(a, b, c) {
+        let min = a;
+        if (min > b) {
+            min = b;
+            if (min > c) {
+                min = c;
+            }
+        }
+        return min;
+    }
+
+    document.write('giá trị nhỏ nhất = ' + searchMin(a, b, c));
+</script>
+</body>
+</html>

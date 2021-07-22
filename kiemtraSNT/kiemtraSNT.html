@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyen tố</title>
+</head>
+<body>
+<script>
+    function checkPrime(snt){
+        if (snt<2) return false;
+        if (snt<4) return true;
+        else {
+            for (let i = 2; i <= Math.sqrt(snt) ; i++) {
+                if (snt%i==0) return false;
+            }
+            return true;
+        }
+    }
+    function loadCheck(){
+        //so bat dau
+        let i = 1;
+        //so luong cac so
+        let count =0;
+        while (count<7){
+            //dieu kien check
+            // if (i%3==0){
+            if (checkPrime(i)){
+                document.write(i);
+                document.write("<br>");
+                count++;
+            }
+            i++;
+        }
+    }loadCheck();
+</script>
+</body>
+</html>

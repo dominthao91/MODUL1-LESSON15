@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính diện tích, cho vi hình tròn</title>
+</head>
+<body>
+<script>
+    // tính diện tích tròn=bình phương bán kính nhân pi;
+    function circleArea() {
+        let a = +prompt('nhập vào bán kính hình tròn');
+        let count = Math.pow(a, 2) * 3.14;
+        alert('diện tích đường tròn =' + count + 'centimét vuông');
+    }
+
+    circleArea();
+
+    //tính chu vi = đường kính nhân pi hoặc 2 lần bán kính nhân pi;
+    function circle() {
+        let duongkinh = prompt('nhập vào đường kính hình tròn');
+        let count = duongkinh * 3.14;
+        alert('chu vi hình tròn =' + count)
+    }
+
+    circle();
+</script>
+</body>
+</html>

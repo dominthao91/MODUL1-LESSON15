@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi chỗ 2 số nguyên nhập vào</title>
+</head>
+<body>
+<script>
+    let num = prompt('nhập vào số nguyên bất kì thứ 1');
+    let nums = prompt('nhập vào số nguyên bất kì thứ 2');
+
+    function changePlaces(a, b) {
+        let arr = [];
+        let c = a;
+        a = b;
+        arr.push(a);
+        b = c;
+        arr.push(b);
+        return arr;
+    }
+
+    alert(changePlaces(num, nums))
+</script>
+</body>
+</html>
